@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Data structures and algorithms review questions">
+    <meta name="author" content="Lien Le">
+    <meta name="country" content="Vietnam">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/ctdlgt.css">
+    <title>Cau hoi on tap CTDL & GT</title>
+</head>
+<body>
+    <h2 id="title_text">Câu hỏi ôn tập CTDL & GT</h2>
+    <nav>
+        <a href="#question1">Câu 1. Trình bày mối quan hệ giữa cấu trúc giữ liệu và giải thuật, cho ví dụ minh hoạ.</a>
+        <a href="#question2">Câu 2. Trình bày mối quan hệ giữa cấu trúc dữ liệu và các phép toán trên cấu trúc dữ liệu. </a>
+        <a href="#question3">Câu 3. Trình bày sự khác nhau giữ cấu trúc dữ liệu và cấu trúc lưu trữ, cho ví dụ minh hoạ. </a>
+        <a href="#question4">Câu 4. Trình bày những đặc điểm về cấu trúc dữ liệu trong các ngôn ngữ lập trình bậc cao, có liên hệ với ngôn ngữ C. </a>
+        <a href="#question5">Câu 5. Trình bày nguyên tắc thiết kế Top-Down, cho ví dụ minh hoạ. </a>
+        <a href="#question6">Câu 6. Trình bày Phương pháp tinh chỉnh từng bước, cho ví dụ minh hoạ. </a>
+        <a href="#question7">Câu 7. Trình bày cách Phân tích thời gian thực hiện giải thuật. </a>
+        <a href="#question8">Câu 8. Trình bày cách Xác định độ phức tạp tính toán của giải thuật, với những nội dung: Qui tắc tổng, Phép toán tích cực, thời gian chạy của các câu lệnh lặp, cho ví dụ minh hoạ.</a>
+        <a href="#question9">Câu 9. Trình bày ưu điểm, nhược điểm của ba phương pháp sắp xếp: sắp xếp nhanh (Quick - sort), sắp xếp kiểu vun đống (Heap - sort), sắp xếp kiểu hoà nhập (Merge - sort). Trình bày những nhận xét khi sử dụng các phương pháp sắp xếp.</a>     
+    </nav>
+    <div class = "questions">
+        <h3 id="question1" class="title_questions">Câu 1. Trình bày mối quan hệ giữa cấu trúc giữ liệu và giải thuật, cho ví dụ minh hoạ.</h3>
+        <p>- Giải thuật chỉ phản ánh các phép xử lý, còn đối tượng để xử lý trên máy là dữ liệu, chúng biểu diễn các thông tin cần thiêt cho bài toán như dữ liệu vào, ra hay kết quả trung gian.</p>
+        <p>- Không thể nói tới giải thuật mà không nhắc đến các tác động của nó lên dữ liệu nào. Còn xét tới dữ liệu là phải hiểu dữ liệu đó cần được tác động bởi giải thuật nào để được kết quả mong muốn.</p> 
+        <p>- Giữa cấu trúc dữ liệu vs giải thuật có mỗi quan hệ mật thiết .Có thể coi chúng như hình vs bóng. Không thể nói tới cái này mà không nhắc tới cái kia</p>
+        <p>- Do đó cần nghiên cứu các cấu trúc dữ liệu đi đôi vs việc xác lập các giải thuật xử lên trên cấu trúc đó</p>
+        <p>
+            - Ví dụ: Giả sử ta có 1 danh sách các trường đại học và cao đẳng trên cả nước mỗi trường có các thông tin sau: tên trường, địa chỉ, sdt phòng đạo tạo. Ta muốn viết một chươnh trình trên máy tính điện 
+            để khi cho biết "tên trường" máy sẽ hiện ra màn hình cho ta: "địa chỉ" và "sdt phòng đào tạo" của trường đó. Một cách đơn giản là cứ duyệt tuần tự các tên trường trong danh sách cho tới khi tìm thấy 
+            tên trường cần tìm thì sẽ đối chiếu ra "địa chỉ" và "sdt phòng đào tạo" của trường đó.Cách tìm tuần tự này rõ ràng chỉ chấp nhận được khi danh sách ngắn còn danh sách dài thì rất mất thời gian.
+        </p>  
+        <p>
+            - Nếu ta biết tổ chức lại danh sách bằng cách sắp xếp theo thứ tự từ điển của tên trường, thì có thể áp dụng 1 giải thuật tìm kiếm khác tốt hơn, tương tự như ta vẫn thường làm khi tr từ điển.
+            Cách tìm này nhanh hơn cách trên rất nhiều nhưng không thể áp dụng được với dữ liệu chưa được sắp xếp</p>
+        <p>    
+            - Nếu lại biết tổ chức thêm 1 bảng mục lục chỉ dẫn theo chữ cái đầu tiên của tên trường, thì khi tìm "địa chỉ" và "sdt phòng đào tạo" của Hvktmm ta sẽ bỏ qua được các tên trường mà chữ cái đầu không phải là "H"
+            Như vậy giữa cấu trúc dữ liệu vs giải thuật có mỗi quan hệ mật thiết
+        </p>
+    </div>
+    <div class="questions">
+        <h3 id="question2" class="title_questions">Câu 2. Trình bày mối quan hệ giữa cấu trúc dữ liệu và các phép toán trên cấu trúc dữ liệu.</h3>
+        <p>
+            - Đối với các bài toán phi số, đi đôi với các cấu trúc dữ liệu mới cũng xuất hiện các phép toán mới tác động trên các cấu trúc ấy. Thông thường có các phép toán như:
+            phép tạo lập hoặc hủy bỏ 1 cấu trúc, phép truy nhập vào từng phần tử của cấu trúc, phép bổ sung hoặc loại bỏ 1 phần tử trên cấu trúc...
+        </p>
+        <p>
+            - Các phép toán đó sẽ có những tác dụng khác nhau đối với từng cấu trúc. Có phép toán hữu hiệu đối với cấu trúc này nhưng lại tỏ ra không hữu tiện trên các cấu trúc khác.
+        </p>
+        <p>
+            - Vì vậy khi chọn 1 cấu trúc dữ liệu ta phải nghĩ ngay tới các phép toán tác động trên cấu trúc ấy và ngược lại, nói tới phép toán thì lại phải chú ý tới phép đó điều kiện 
+            tác động trên cấu trúc dữ liệu nào. Cho nên người ta thường quan niệm: nói tới cấu trúc dữ liệu là bao hàm luôn cả phép toán tác động đến cấu trúc ấy.
+        </p>
+    </div>
+    <div class="questions">
+        <h3 id="question3" class="title_questions">Câu 3. Trình bày sự khác nhau giữ cấu trúc dữ liệu và cấu trúc lưu trữ, cho ví dụ minh hoạ.</h3>
+        <p>
+            - Cách biểu diễn một cấu trúc dữ liệu trong bộ nhớ máy tính điện tử điều kiện gọi là cấu trúc lưu trữ . Đó chính là cách cài đặt cấu trúc ấy trên máy tính điện tử và trên cơ sở cấu trúc lưu trữ này mà thực hiện các phép xử lí .
+            Ta cần phân biệt giữa cấu trúc dữ liệu và cấu trúc lưu trữ tương ứng. Có thể có nhiều cấu trúc lưu trữ khác nhau cho cùng một cấu trúc dữ liệu, cũng như có thể có những cấu trúc dữ liệu khác nhau mà điều kiện thể hiện trong bộ nhớ bởi cùng một kiểu cấu trúc lưu trữ .
+        </p>
+        <p>
+            - Ví dụ: Cấu trúc lưu trữ kế tiếp ( mảng) và cấu trúc lưu trữ móc nối đều có thể điều kiện dùng để cài đặt cấu trúc dữ liệu ngăn xếp (stack). Mặt khác, các cấu trúc dữ liệu như : danh sách, ngân xếp và cây đều có thể cài đặt trên máy thông qua cấu trúc lưu trữ móc nối.
+        </p>
+    </div>
+    <div class="questions">
+        <h3 id="question4" class="title_questions">Câu 4. Trình bày những đặc điểm về cấu trúc dữ liệu trong các ngôn ngữ lập trình bậc cao, có liên hệ với ngôn ngữ C </h3>
+        <p>- Trong các ngôn ngữ lập trình bậc cao, các dữ liệu được phân nhánh thành các kiểu dữ liệu. Kiểu dữ liệu nhận của 1 biến được xác định bởi 1 tập các giá trị mà biến đó có thể nhận và các phép toán có thể thực hiện trên các giá trị đó.</p>
+        <p>- Mỗi ngôn ngữ lập trình cung cấp cho chúng ta 1 số kiểu dữ liệu cơ bản. Trong các ngôn ngữ lập trình khác nhau, các kiểu dữ liệu cơ bản có thể khác nhau. Các ngôn ngữ lập trình như C, pascal,... có các kiểu dữ liệu cơ bản rất phong phú.</p>
+        <p>- Các kiểu dữ liệu điều kiện tạo thành từ nhiều kiểu dữ liệu khác nhau được gọi là kiểu dữ liệu có cấu trúc. Các dữ liệu thuộc kiểu dữ liệu cấu trúc được gọi là cấu trúc dữ liệu.</p>
+        <p>- Từ các kiểu cơ bản, bằng cách sử dụng các quy tắc, cú pháp để kiến tạo các kiểu dữ liệu, người lập trình có thể xây dựng nên được gọi là các kiểu dữ liệu xác định bởi người sử dụng.</p>
+        <p>=> Như vậy: 1 cấu trúc dữ liệu phức tạp gồm nhiều thành phần dữ liệu, mỗi thành phần hoặc là dữ liệu cơ sở hoặc là cấu trúc dữ liệu đã điều kiện xây dựng. Các thành phần dữ liệu tạo nên một cấu trúc dữ liệu điều kiện liên kết với nhau theo 1 cách nào đó.</p>
+        <p>- Trong ngôn ngữ lập trình C phương pháp để liên kết dữ liệu:</p>
+        <p> + Liên kết dữ liệu cùng kiểu tạo thành mảng dữ liệu</p>
+        <p> + Liên kết các dữ liệu thành mảng cấu trúc trong C</p>
+        <p> + Sử dụng con trỏ để liên kết dữ liệu </p>
+    </div>
+    <div class="questions">
+        <h3 id="question5" class="title_questions">Câu 5. Trình bày nguyên tắc thiết kế Top-Down, cho ví dụ minh hoạ. </h3>
+        <p>*Nguyên tắc: Phân tích tổng quát toàn bộ vấn đề, xuất phát từ dữ kiện và các mục tiêu đặt ra, để đề cập đến công việc chủ yếu, rồi sau đó mới đi dần vào giải quyết các phần cụ thể một cách chi tiết hơn.</p>
+        <p>*VD: Ta phải quản lý và bào trì các hồ sơ về học bổng của các sinh viên ở diện được tài trợ, đồng thời thường xuyên phải lập báo cáo tổng kết để trình lên hiệu trưởng.</p>
+        <p>Do đó, chương trình lập ra phải tạo điều kiện cho người sử dụng giải quyết được các vấn đề sau:</p>
+        <p>- Tìm lại và hiển thị được bất kì bản ghi của bất kì sinh viên nào tại thiết bị cuối của người dùng.</p>
+        <p>- Cập nhật được bản ghi của 1 sinh viên cho trước bằng các thay đổi điểm trung bình, điểm đạo đức, khoản tiền tài trợ, nếu cần.</p>
+        <p>- In bản tổng kết chứa những thong tin hiện thời gồm số hiệu, điểm trung bình, điểm đạo đức, khoản tiền tài trợ.</p>
+        <p>Từ những nhận định trên, giải thuật sẽ phải giải quyết các vấn đề sau:</p>
+        <p>- Những thông tin về sinh viên được học bổng, lưu trên đĩa phải được đọc vào bộ nhớ trong để có thế xử lý.</p>
+        <p>- Xử lý các thông tin này để tạo ra kết quả mong muốn.</p>
+        <p>- Sao chép các thông tin đã được cập nhật vào tệp trên đĩa để lưu trữ cho việc xử lý sau này.</p>
+        <p>Các nhiệm vụ ở mức đầu này thường phức tạp, cần phải chia thành các nhiệm vụ con. Chẳng hạn nhiệm vụ xử lý thông tin có thể phân thành 3:</p>
+        <p>- Tìm lại bản ghi của một sinh viên cho trước</p>
+        <p>- Cập nhật thông tin trong bản ghi sinh viên</p>
+        <p>- In bảng tổng kết những thông tin về các sinh viên được học bổng</p>
+        <p>Những nhiệm vụ con này cũng có thể chia thành nhiệm vụ nhỏ hơn...</p>
+    </div>
+    <div class="questions">
+        <h3 id="question6" class="title_questions">Câu 6. Trình bày Phương pháp tinh chỉnh từng bước, cho ví dụ minh hoạ. </h3>
+        <p>- Tinh chỉnh từng bước là phương pháp thiết kế giải thuật gắn liền với lập trình. Nó phản ánh tinh thần của quá trình mô - dun hóa bài toán và thiết kế kiểu top - down.</p>
+        <p>
+            - Ban đầu chương trình thể hiện giải thuật được trình bày bằng ngôn ngữ tự nhiên phản ánh ý chính của công việc cần làm. Từ các bước sau, những lời, những ý đó sẽ được chi tiết hóa dần dần tương ứng với những công việc nhỏ hơn.
+            Đó là các bước tinh chỉnh. Sự tinh chỉnh sẽ được hướng về phía ngôn ngữ lập trình mà ta chọn.
+        </p>
+        <p>
+            - Quá trình thiết kế giải thuật và phát triển chương trình sẽ được thể hiện dần dần từ dạng ngôn ngữ tự nhiên, qua giả ngôn ngữ rồi đến ngôn ngữ lập trình và đi từ mức “làm cái gì” đến mức “làm thế nào”, ngày càng sát với 
+            các chức năng ứng với các câu lệnh của ngôn ngữ lập trình đã chọn. Dữ liệu trong quá trình này cũng được “tinh chế” dần dần từ dạng cấu trúc đến dạng lưu trữ để cài đặt cụ thể.
+        </p>
+    </div>
+    <div class = "questions">
+        <h3 id="question7" class="title_questions">Câu 7. Trình bày cách Phân tích thời gian thực hiện giải thuật. </h3>
+        <p>- Với 1 bài toán, không phải chỉ có 1 giải thuật. Do đó đòi hỏi phải chọn 1 giải thuật đưa tới kết quả nhanh.</p>
+        <p>- Thời gian thực hiện giải thuật phụ thuộc vào rất nhiều yếu tố. Một yếu tố cần được chú ý trước tiên là kích thước của dữ liệu vào thì thời gian thực hiện T của 1 giải thuật cần được biểu diễn như 1 hàm của n: T(n).</p>
+        <p>- Các kiểu lệnh và tốc độ xử lý của máy tính, ngôn ngữ viết chương trình và chương trình dịch ngôn ngữ ấy đều ảnh hưởng tới thời gian thực hiện; nhưng những yếu tố này không đồng đều với mọi loại máy tính trên đó cài đặt giải thuật, 
+            vì vậy không thể dựa vào chúng để xác lập T(n). Nghĩa là T(n) không thể biểu diễn thành đơn vị thời gian bằng giây, bằng phút...được. Tuy nhiên
+            nếu như thời gian thực hiện của một giải thuật là T1(n) = cn2 và thời gian thực hiện một giải thuật khác T2(n) = kn (với c và k là 1 hằng số nào đó), thì khi n khá lớn, thời gian thực hiện T2 rõ ràng ít hơn với giải thuật T1.
+        </p>
+        <p>- Cách đánh giá thời gian thực hiện giải thuật độc lập với máy tính và các yếu tố liên quan tới máy như vậy sẽ dẫn tới khái niệm về độ phức tạp vê thời gian của giải thuật.</p>
+    </div>
+    <div class = "questions">
+        <h3 id="question8" class="title_questions">Câu 8. Trình bày cách Xác định độ phức tạp tính toán của giải thuật, với những nội dung: Qui tắc tổng, Phép toán tích cực, thời gian chạy của các câu lệnh lặp, cho ví dụ minh hoạ. </h3>
+        <p>* Phép toán tích cực: Là phép toán thuộc giải thuật mà thời gian thực hiện nó không ít hơn thời gian thực hiện các phép toán khác, hay số lần thực hiện nó không kém gì cách thực hiện nó.</p>
+        <p>- Nếu thời gian thực hiện 1 giải thuật là T(n)=cn<sup>2</sup> (c là hằng số) thid ta nói: độ phức tạp tính toán của giải thuật này có cấp là n<sup>2</sup> và ta ký hiệu:</p>
+        <p>T(n) = O(n<sup>2</sup>)  (ký hiệu chữ O lớn)</p>
+        <p>- Một cách tổng quát có thể định nghĩa: 1 hàm f(n) được xác định là O(g(n))</p>
+        <p>f(n) = O(g(n))</p>
+        <p>và được gọi là có cấp g(n) nếu tồn tại các hằng số c và n<sub>0</sub> sao cho:</p>
+        <p>f(n) <= cg(n) khi n >= n<sub>0</sub> </p>
+        <p>nghĩa là khi f(n) bị chặn trên bởi 1 hằng số nhân với g(n) với mọi giá trị của n từ 1 thời điểm nào đó</p>
+        <p>* Qui tắc tổng: Giả sử T1(n) và T2(n) là thời gian thực hiện của 2 đoạn chương trình P1 và P2 mà T1(n) = O(f(n)); T2(n) = O(g(n)) thì thời gian thực hiện P1 và P2 kế tiếp nhau sẽ là:</p>
+        <p>T1(n) + T2(n) = O(max(f(n), g(n))</p>
+        <p>VD : 1 chương trình có 3 bước thực hiện mà thời gian thực hiện từng bước : O(n<sup>2</sup>), O(n<sup>3</sup>) và O(nlog<sub>2</sub>n) thì thời gian thực hiện 2 bước đầu là O(max(n<sup>2</sup>, n<sup>3</sup>)) = O(n<sup>3</sup>). 
+            Thời gian thực hiện chương trình sẽ là O(max(n<sup>3</sup>, nlog<sub>2</sub>n)) = O(n<sup>3</sup>)
+        </p>
+        <p>* Thời gian chạy của các câu lệnh lặp </p>
+        <p>- Các câu lệnh lặp gồm: for, while, do...while</p>
+        <p>
+            - Để đánh giá thời gian thực hiện 1 câu lệnh lặp, trước hết ta cần đánh giá số tối đa các lần lặp giả sử đó là L(n).Sau đó đánh giá thời gian chạy của mỗi lần lặp, chú ý rằng thời gian thực hiện thân của 1 lệnh lặp ở các lần lặp khác nhau có thể khác nhau,
+            giả sử thời gian thực hiện thân lệnh lặp ở lần thứ i (i = 1,2,...L(n)) là T<sub>i</sub>(n). Mỗi lần lặp, chúng ta cần kiểm tra điều kiện  lặp giả sử thời gian lặp kiểm tra là T<sub>0</sub>(n). Như vậy thời gian chạy của lệnh lặp là: T<sub>0</sub>(n) + T<sub>i</sub>(n)
+        </p>
+        <p>- Công đoạn khó nhất trong đánh giá thời gian chạy của 1 lệnh lặp là đánh giá số lần lặp. Trong nhiều lệnh lặp, đặc biệt là trong các lệnh lặp For, ta có thể thấy ngay số lần lặp tối đa là bao nhiêu. Nhưng cũng không ít các lệnh lặp, từ điều kiện lặp để suy ra số tối đa các lần lặp,ta cần phải tiến hành các suy diễn không đơn giản.</p>
+        <p>- Trường hợp hay gặp là kiểm tra điều kiện lặp chỉ cần thời gian O(1), thời gian thực hiện các lần lặp là như nhau và giả sử ta đánh giá được là O(f(n)); khi đó nếu đánh giá được số lần lặp là O(g(n)) thì thời gian chạy của lệnh lặp là O(f(n)).f(n)</p>
+        <p>VD: giả sử có mảng A các số thực, cỡ n và ta cần tìm xem mảng có chứa số thực x không. Điều đó có thể thực hiện bởi giải thuật tìm kiếm tuần tự như sau:</p>
+        <p>i = 0;</p>
+        <p>while (i < n && x != A[i])</p>
+        <p>i++;</p>
+        <p>- Lệnh gán (1) có thời gian chạy là O(1). Lệnh lặp (2)-(3) có số tối đa các lần lặp là n, đó là trường hợp x chỉ xuất hiện ở thành phần cuối cùng của mảng A[n-1] hoặc x không có trong mảng. Thân của lệnh lặp là (3) có thời gian chạy O(1). Do đó, lệnh lặp có thời gian chạy là O(n). Giải thuật gồm lệnh gán và lệnh lặp với thời gian là O(1) và O(n), 
+            nên thời gian chạy của nó là O(n).</p>
+    </div>
+    <div class = "questions">
+        <h3 id="question9" class="title_questions">Câu 9. Trình bày ưu điểm, nhược điểm của ba phương pháp sắp xếp: sắp xếp nhanh (Quick - sort), sắp xếp kiểu vun đống (Heap - sort), sắp xếp kiểu hoà nhập (Merge - sort). Trình bày những nhận xét khi sử dụng các phương pháp sắp xếp.</h3>
+        <p>* Nhận xét sắp xếp nhanh (Quick - sort)</p>
+        <p>- Phương pháp sắp xếp kiểu phân đoạn là cải tiến của phương pháp sắp xếp kiểu đổi chỗ vì: “Ở mỗi lượt sắp xếp, không những xếp được một khoá chốt vào đúng vị trí (như sắp xếp nổi bọt) mà còn sắp xếp được một cách tương đối các khoá còn lại của đoạn khoá đang xét (thành hai đoạn con chứa các giá trị lần lượt nhỏ hơn và lớn hơn khoá chốt).”</p>
+        <p>- Phải dùng thêm không gian nhớ cho stack, để bảo lưu thông tin về các đoạn sẽ được xử lý tiếp theo (vì thực hiện đệ quy).</p>
+        <p>
+            - So với sắp xếp nổi bọt thì sắp xếp nhanh mỗi lần đổi chỗ mang tính nhảy vọt. Từng lượt ta chọn một phần tử chốt, đem những số nhỏ hơn nó đặt bên trái nó, những số lớn hơn nó đặt bên phải phải. Dẫn đến số lượt đổi chỗ được ít hơn so với sự đổi chỗ 
+        từng cặp của sắp xếp nổi bọt. Tuy nhiên vào tình huống xấu nhất (việc chọn phần tử chốt chưa đủ tốt) có thể khiến độ phức tạp thuật toán là O(N<sup>2</sup>). Do tính không ổn định của quick sort nên nó có độ phức tạp trung bình là O(N.logN).</p>
+        <P>- Ưu điểm:</P>
+        <p> + Tốc độ sắp xếp nhanh</p>
+        <p> + Được sử dụng trong nhiều thư viện của các ngôn ngữ như C++, Java, ...</p>
+        <p>- Nhược điểm:</p>
+        <p> + Phụ thuộc vào cách chọn phần tử chốt.</p>
+        <p> + Không ổn định</p>
+        <p>* Nhận xét sắp xếp kiểu vun đống (Heap - sort)</p>
+        <p>- Heap sort thì ngoài 1 nút nhớ phụ, để thực hiện đổi chỗ, nó không cần thêm gì nữa.</p>
+        <p>- Nếu so sánh về tốc độ, giải thuật Heap Sort sẽ chạy chậm hơn Quick Sort một chút. Tuy nhiên, ưu điểm của Heap Sort là độ phức tạp trong trường hợp tệ nhất chỉ là O(N.log(N)), ngoài ra chúng ta không cần sử dụng thêm bất kỳ một cấu trúc dữ liệu nào khác trong quá trình sắp xếp, vì thế Heap Sort vẫn được ưa chuộng và đánh giá là một thuật toán sắp xếp tốt, hiệu suất của thuật toán cao. </p>
+        <p>- Nhược điểm duy nhất của Heap Sort có lẽ chỉ là nó chạy chậm hơn Quick Sort và Merge Sort, và nó là một thuật toán sắp xếp không ổn định về thời gian. Tuy nhiên, cấu trúc dữ liệu Heap lại có những ứng dụng to lớn hơn nhiều trong thực tế hơn là chỉ để sắp xếp, vì vậy hiểu và ứng dụng được Heap Sort cũng rất tốt cho các bạn đang học về Cấu trúc dữ liệu và Giải thuật.</p>
+        <p>* Nhận xét sắp xếp kiểu hoà nhập (Merge - sort)</p>
+        <p>- Nhược điểm của phương pháp sắp xếp kiểu trộn là chi phí về không gian khá lớn (2n phần tử nhớ) gấp đôi so với các phương pháp thông thường. Do đó, thường sử dụng phương pháp này khi sắp xếp ngoài, đối với các tập tin.</p>
+        <p>- Trộn kiểu hai đường trực tiếp không tận dụng được khả năng “vốn đã được sắp xếp tự nhiên rồi” của các khoá trong dãy lúc ban đầu. Ở mỗi lượt, thực hiện trộn hai mạch với độ dài đã ấn định: ở lượt thứ k thì độ dài 2 mạch được trộn là 2<sup>k-1</sup>.</p>
+        <p>- Ưu điểm: </p>
+        <p> + Hiệu suất của merge sort cao</p>
+        <p> + Tốc độ sắp xếp nhanh, độ phức tạp O(N.logN) </p>
+        <p> + Ổn định</p>
+    </div>
+    <footer>
+		Created by Lien Le - <a href="mailto:lienle2210@gmail.com">Email me</a>
+	</footer>
+</body>
+</html>

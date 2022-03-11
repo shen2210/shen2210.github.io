@@ -1,0 +1,36 @@
+#title_text {
+    margin: 0;
+    background-color: #008ae6;
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+nav {
+    background-color: #DDD;
+    overflow: hidden;
+    padding : 0px 40px;
+}
+
+nav a {
+    display: block;
+}
+.title_questions {
+    color: red;
+}
+
+.questions {
+    padding : 0px 40px 5px 40px;
+}
+
+footer {
+	background-color: #333;
+	color: white;
+	padding: 10px 20px;
+	text-align: center;
+}
+
+footer > a {
+	color: #d9d9d9;
+}
+
