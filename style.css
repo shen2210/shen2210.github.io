@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+
+:root{
+    --primary-color:#f2726a;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background: linear-gradient(45deg,#F2FFE6,#FFFBE6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins";
+    color: white;
+}
+
+.card{
+    background: #242628;
+    width: 400px;
+    height: 500px;
+    border-radius: 10px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.card_img{
+    width: 200px;
+    height: 200px;
+    border:4px solid var(--primary-color);
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    transform: translateY(25px);
+    transition: 0.5s;
+}
+
+.card h2{
+    margin: 35px 35px 10px 35px;
+}
+
+.img{
+    object-fit: cover;
+    object-position: center;
+}
+
+#my_pic{
+    width: 210px;
+    height: 240px;
+}
+
+.card p {
+    color: var(--primary-color);
+}
+
+.card_social{
+    margin: 25px 0;
+}
+
+.card_social a{
+    color: white;
+    margin: 25px 20px;
+    font-size: 30px;
+}
+
+.card button{
+    width: 150px;
+    height: 40px;
+    border: 1px solid var(--primary-color);
+    background: transparent;
+    color: white;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.card button:hover{
+    background: var(--primary-color);
+}
+
+.card_social a:hover{
+    color: var(--primary-color);
+}
+
+.card_img:hover{
+    width: 100%;
+    height: 100%;
+    border-radius: unset;
+    transform:unset;
+    border: none;
+}
+
+#my_pic:hover{
+    width: 100%;
+    height: 100%;
+}
