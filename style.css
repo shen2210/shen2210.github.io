@@ -68,7 +68,7 @@ body{
     font-size: 30px;
 }
 
-.card button{
+.open_modal_btn{
     width: 150px;
     height: 40px;
     border: 1px solid var(--primary-color);
@@ -97,4 +97,79 @@ body{
 #my_pic:hover{
     width: 100%;
     height: 100%;
+}
+
+.modal{
+    position: fixed;
+    top:0;
+    left: 0;
+    background: rgba(0,0,0,0.6);
+    height: 100vh;
+    width: 100vw;
+}
+
+.modal_inner{
+    width: 400px;
+    position: relative;
+    text-align: left;
+    margin: auto;
+    background: white;
+    border-radius: 5px;
+    overflow: hidden;
+    animation: modalShow 0.2s linear;
+    top: 40%;
+}
+
+#icon_close{
+    color: white;
+    margin: 0px 0px 0px 290px;
+    padding: 0px;
+}
+
+.modal_header{
+    display: flex;
+    justify-content: spacse-between;
+    align-items: center;
+    padding: 10px;
+    background:var(--primary-color);
+}
+
+.modal_body p{
+    color: black;
+    font-size: small;
+    padding: 5px 10px 0px 10px;
+}
+
+.modal_header p{
+    color: white;
+}
+
+.modal_footer{
+    padding: 10px;
+    text-align: right;
+}
+
+.modal_footer button{
+    padding: 10px 15px;
+    color: white;
+    background: var(--primary-color);
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.hide{
+    display: none;
+}
+
+@keyframes modalShow{
+    from{
+        top: -200px;
+        opacity: 0;
+    }
+    to{
+        top: 40%;
+        opacity: 1;
+    }
 }
